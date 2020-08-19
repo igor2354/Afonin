@@ -518,16 +518,47 @@ h1, h2, h3, h4, h5, h6 {
       grid-template-areas: "clo1 clo2 clo3" "clo1 clo4 clo5";
 }
 
+.tabs__item:first-child .tabs__wrap .publication {
+  position: relative;
+}
+
+.tabs__item:first-child .tabs__wrap .publication__group {
+  z-index: 10;
+}
+
+.tabs__item:first-child .tabs__wrap .publication::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(10, 36, 130, 0.7);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tabs__item:first-child .tabs__wrap .publication:hover::before {
+  background: #0a2482;
+}
+
 .tabs__item:first-child .tabs__wrap .publication:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 1;
   grid-area: clo1;
-  background-image: url("../img/dots-publish.svg");
 }
 
 .tabs__item:first-child .tabs__wrap .publication:nth-child(1) .publication__name {
   font-size: 36px;
+}
+
+.tabs__item:first-child .tabs__wrap .publication:nth-child(1)::before {
+  background: url("../img/dots-publish.svg") no-repeat 30px 20px, rgba(10, 36, 130, 0.7);
+}
+
+.tabs__item:first-child .tabs__wrap .publication:nth-child(1):hover::before {
+  background: url("../img/dots-publish.svg") no-repeat 30px 20px, #0a2482;
 }
 
 .tabs__item:first-child .tabs__wrap .publication:nth-child(2) {
@@ -599,7 +630,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabs__item:nth-child(2) .tabs__wrap .publication__video-prev {
-  background-image: url("../img/dots-publish.svg");
   position: absolute;
   top: 0;
   left: 0;
@@ -620,9 +650,29 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background: url("../img/icon/icon-play-video.svg") no-repeat center;
+  width: 110px;
+  height: 110px;
+  background: url("../img/icon/icon-play-video.svg") no-repeat 72% 50%;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tabs__item:nth-child(2) .tabs__wrap .publication__video-prev:hover span {
+  -webkit-box-shadow: 0 0 5px 5px #ffffff;
+          box-shadow: 0 0 5px 5px #ffffff;
+}
+
+.tabs__item:nth-child(2) .tabs__wrap .publication__video-prev::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../img/dots-publish.svg") no-repeat 30px 20px, rgba(10, 36, 130, 0.7);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .tabs__item:nth-child(3) .tabs__wrap {
@@ -633,6 +683,26 @@ h1, h2, h3, h4, h5, h6 {
   -ms-grid-rows: 285px 285px;
       grid-template-rows: 285px 285px;
   gap: 30px;
+}
+
+.tabs__item:nth-child(3) .tabs__wrap .publication__group {
+  z-index: 10;
+}
+
+.tabs__item:nth-child(3) .tabs__wrap .publication::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(10, 36, 130, 0.7);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.tabs__item:nth-child(3) .tabs__wrap .publication:hover::before {
+  background: #0a2482;
 }
 
 .publication {

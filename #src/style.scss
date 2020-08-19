@@ -345,11 +345,39 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
           "clo1 clo2 clo3"
           "clo1 clo4 clo5";
         & .publication {
+          &__group {
+            z-index: 10;
+          }
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(4%, 14%, 51%, 0.7);
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            &::before {
+              background: rgba(4%, 14%, 51%, 1);
+            }
+          }
           &:nth-child(1) {
             grid-area: clo1;
-            background-image: url("../img/dots-publish.svg");
             .publication__name {
               font-size: 36px;
+            }
+            &::before {
+              background: url("../img/dots-publish.svg") no-repeat 30px 20px,
+                rgba(4%, 14%, 51%, 0.7);
+            }
+            &:hover {
+              &::before {
+                background: url("../img/dots-publish.svg") no-repeat 30px 20px,
+                  rgba(4%, 14%, 51%, 1);
+              }
             }
           }
           &:nth-child(2) {
@@ -401,7 +429,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             position: relative;
           }
           &__video-prev {
-            background-image: url("../img/dots-publish.svg");
             position: absolute;
             top: 0;
             left: 0;
@@ -415,10 +442,28 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
               top: 50%;
               left: 50%;
               transform: translate(-50%, -50%);
-              width: 90px;
-              height: 90px;
-              background: url("../img/icon/icon-play-video.svg") no-repeat
-                center;
+              width: 110px;
+              height: 110px;
+              background: url("../img/icon/icon-play-video.svg") no-repeat 72%
+                50%;
+              border-radius: 50%;
+              transition: all 0.3s ease;
+            }
+            &:hover {
+              & span {
+                box-shadow: 0 0 5px 5px #ffffff;
+              }
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background: url("../img/dots-publish.svg") no-repeat 30px 20px,
+                rgba(4%, 14%, 51%, 0.7);
+              transition: all 0.3s ease;
             }
           }
         }
@@ -430,6 +475,26 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 285px 285px;
         gap: 30px;
+        & .publication {
+          &__group {
+            z-index: 10;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background: rgba(4%, 14%, 51%, 0.7);
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            &::before {
+              background: rgba(4%, 14%, 51%, 1);
+            }
+          }
+        }
       }
     }
   }

@@ -32,21 +32,12 @@ $(document).ready(function () {
   //=====================IMG TO BACKGROUND CSS================================
   $.each($(".ibg"), function (index, val) {
     if ($(this).find("img").length > 0) {
-      if ($(this).css(["background-image"])["background-image"] != "none") {
-        $(this).css(
-          "background",
-          'url("./img/dots-publish.svg") no-repeat 30px 20px, url("./img/publish/back-opacity.png") no-repeat center / cover, url("' +
-            $(this).find("img").attr("src") +
-            '") no-repeat center / cover'
-        );
-      } else {
-        $(this).css(
-          "background-image",
-          'url("./img/publish/back-opacity.png"), url("' +
-            $(this).find("img").attr("src") +
-            '")'
-        );
-      }
+      $(this).css(
+        "background",
+        'url("' +
+          $(this).find("img").attr("src") +
+          '") no-repeat center / cover'
+      );
     }
   });
 
