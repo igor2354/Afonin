@@ -1,0 +1,148 @@
+.footer {
+  padding: 60px 0;
+  background: url("../img/dots-footer.svg") no-repeat 0% 70%, #0a2783;
+  &__row {
+    &:first-child {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+    }
+    &:last-child {
+      display: flex;
+      justify-content: flex-end;
+      .footer__column {
+        flex: 0 1 1270px;
+        display: flex;
+      }
+    }
+  }
+
+  &__column {
+    &:nth-child(2) {
+      display: flex;
+      flex: 0 1 1270px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 30px;
+  }
+
+  &__social {
+    display: flex;
+    & a {
+      display: block;
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__name {
+    @include font-param("Gordita-Medium", 18px, #ffffff, 500, 120%);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__item {
+    margin-bottom: 30px;
+    @include font-param(
+      "Gordita-Regular",
+      18px,
+      rgba(255, 255, 255, 0.7),
+      400,
+      120%
+    );
+    & a {
+      color: inherit;
+    }
+  }
+
+  &__info {
+    margin-right: 90px;
+  }
+  &__addition {
+    margin-right: 90px;
+  }
+
+  &__contact {
+    margin-right: 105px;
+    flex: 0 1 280px;
+    .footer__item {
+      color: #ffffff;
+    }
+  }
+
+  &__subscribe {
+    flex: 0 1 355px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    input[type="email"] {
+      max-width: 270px;
+      padding: 18px 18px 18px 30px;
+      margin-bottom: 15px;
+      @include font-param(
+        "Gordita-Regular",
+        18px,
+        rgba(10, 39, 131, 0.5),
+        400,
+        120%
+      );
+    }
+  }
+  &__button {
+    position: relative;
+    margin-bottom: 30px;
+    @include font-param("Gordita-Medium", 18px, #ffffff, 500, 140%);
+    background: none;
+    border: 2px solid #ffffff;
+    padding: 14px 50px 14px 0;
+    max-width: 270px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 31px;
+      height: 16px;
+      top: 38%;
+      right: 50px;
+      background: url("../img/icon/icon-arrow-footer.svg") no-repeat;
+    }
+  }
+
+  &__sub {
+    @include font-param(
+      "Gordita-Regular",
+      14px,
+      rgba(255, 255, 255, 0.5),
+      400,
+      120%
+    );
+    & span {
+      & a {
+        color: #ffffff;
+        border-bottom: 1px solid #ffffff;
+      }
+    }
+  }
+
+  &__poilicy {
+    margin-right: 90px;
+    & a {
+      @include font-param(
+        "Gordita-Regular",
+        18px,
+        rgba(255, 255, 255, 0.5),
+        400,
+        120%
+      );
+      text-decoration: underline;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
