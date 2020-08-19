@@ -1,6 +1,6 @@
 $(document).ready(function () {
   $(window).on("scroll", function () {
-    var scrolled = $(this).scrollTop();
+    let scrolled = $(this).scrollTop();
     if (scrolled > 141) {
       $(".header").addClass("scrolled");
       $(".juridical").addClass("scrolled");
@@ -8,6 +8,12 @@ $(document).ready(function () {
     if (scrolled <= 141) {
       $(".header").removeClass("scrolled");
       $(".juridical").removeClass("scrolled");
+    }
+  });
+
+  $(window).on("load", function () {
+    if ($(this).scrollTop() > 141) {
+      $(".header").addClass("scrolled");
     }
   });
 
