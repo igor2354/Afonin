@@ -29,10 +29,6 @@
   font-style: normal;
 }
 
-//////////////////////////////////////////////////ОБНУЛЕНИЕ///////////////////////////////////////////////////////
-
-@import "_nullstyle";
-
 ///////////////////////////////////////////////////АДАПТИВ ШРИФТОВ////////////////////////////////////////////////
 
 $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
@@ -56,6 +52,14 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   line-height: $line;
 }
 
+//////////////////////////////////////////////////ОБНУЛЕНИЕ///////////////////////////////////////////////////////
+
+@import "_nullstyle";
+
+//////////////////////////////////////////////////ОБШИЕ СТИЛИ///////////////////////////////////////////////////////
+
+@import "_overall-style.scss";
+
 ///////////////////////////////////////////ШАПКА САЙТА////////////////////////////////////////////////////////////
 
 @import "_header";
@@ -70,8 +74,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   position: relative;
   padding: 90px 0 245px 0;
   background-color: #f5faff;
-  &__row {
-  }
 
   &__title {
     max-width: 650px;
@@ -122,22 +124,14 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   }
 }
 
-.title {
-  @include font-param("Gordita-Bold", 48px, #000000, 700, 120%);
-}
 //==================БЛОК-2========
 .trust {
   background: url("../img/dots.svg") no-repeat 100% 11%;
   padding: 90px 0;
-  &__row {
-  }
 
   &__title {
     color: #0a2783;
     margin-bottom: 60px;
-  }
-
-  &__column {
   }
 
   &__image {
@@ -151,9 +145,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   background: url("../img/dots.svg") no-repeat 100% 1%,
     url("../img/dots-rewers.svg") no-repeat 0% 94%;
   padding: 30px 0 65px 0;
-  &__row {
-  }
-
   &__title {
     color: #0a2783;
     margin-bottom: 60px;
@@ -242,28 +233,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
     justify-content: center;
   }
 }
-.btn {
-  display: block;
-  position: relative;
-  padding: 27px 0 30px 0;
-  text-align: center;
-  width: 420px;
-  border: 2px solid #0a2783;
-  @include font-param("Gordita-Bold", 24px, #0a2783, 700, 120%);
-  & span {
-    position: relative;
-    padding-right: 45px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 31px;
-      height: 16px;
-      right: 0;
-      top: 37%;
-      background: url("../img/icon/btn-arrow.svg");
-    }
-  }
-}
 
 //==================БЛОК-4========
 
@@ -345,23 +314,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
       z-index: -1;
       max-width: 100%;
     }
-  }
-
-  .ibg {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-  }
-
-  .ibg img {
-    width: 0;
-    height: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    visibility: hidden;
   }
 
   &__item:first-child {
@@ -578,21 +530,10 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 
 .reviews {
   background: #f5faff;
-  &__row {
-  }
 
   &__title {
     color: #0a2783;
     margin-bottom: 60px;
-  }
-
-  &__column {
-  }
-
-  &__slider-1 {
-  }
-
-  &__slider-2 {
   }
 }
 .slider-1 {
@@ -650,15 +591,10 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 
 .mass-media {
   padding: 90px 0;
-  &__row {
-  }
 
   &__title {
     color: #0a2783;
     margin-bottom: 55px;
-  }
-
-  &__column {
   }
 
   &__slider {
@@ -680,8 +616,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   padding: 90px 0;
   background: url("../img/message-bg.svg") no-repeat 100% 80%,
     url("../img/dots-message.svg") no-repeat 100% 10%;
-  &__row {
-  }
 
   &__title {
     color: #0a2783;
@@ -692,9 +626,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   &__column {
     max-width: 725px;
   }
-
-  &__form {
-  }
 }
 
 .form {
@@ -702,7 +633,11 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   flex-direction: column;
   & input:not([type="submit"]),
   textarea {
-    @include font-param("Gordita-Regular", 24px, rgba(0, 0, 0, 0.5), 400, 140%);
+    @include font-param("Gordita-Regular", 24px, #000000, 400, 140%);
+  }
+  & input:not([type="submit"])::placeholder,
+  textarea::placeholder {
+    color: rgba(0, 0, 0, 0.5);
   }
   input[type="number"] {
     -moz-appearance: textfield;
