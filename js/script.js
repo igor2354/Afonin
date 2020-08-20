@@ -42,10 +42,56 @@ $(document).ready(function () {
   });
 
   //==================PLAY VIDEO==============================================
-  $(".pause").on("click", function () {
+
+  $("#tab-2")
+    .find($(".publication:nth-child(4)"))
+    .find(".publication__name")
+    .text(
+      $("#tab-2")
+        .find($(".publication:nth-child(1)"))
+        .find(".publication__name")
+        .text()
+    );
+
+  $("#tab-2")
+    .find($(".publication:nth-child(4)"))
+    .find(".publication__text")
+    .text(
+      $("#tab-2")
+        .find($(".publication:nth-child(1)"))
+        .find(".publication__text")
+        .text()
+    );
+
+  $(".publication__video-prev").on("click", function () {
     if ($(this).parents(".publication__video").find("video").get(0).paused) {
       $(this).parents(".publication__video").find("video").get(0).play();
-      $(this).parents(".publication__video-prev").css({ display: "none" });
+      $(this).css({ display: "none" });
+    }
+  });
+
+  function pauseVideo(element) {
+    const video = $(".publication__video").find("video");
+    $.each(video, function (index, val) {
+      if (element[0] != val) {
+        val.pause();
+      }
+    });
+  }
+
+  $(".publication__video").on("click", function () {
+    if ($(this)[0] != $(".publication__video:first")[0]) {
+      $(".publication__video:first").parent().before($(this).parent());
+      $("#tab-2")
+        .find($(".publication:nth-child(4)"))
+        .find(".publication__name")
+        .text($(this).parent().find(".publication__name").text());
+      $("#tab-2")
+        .find($(".publication:nth-child(4)"))
+        .find(".publication__text")
+        .text($(this).parent().find(".publication__text").text());
+
+      pauseVideo($(this).find("video"));
     }
   });
 
