@@ -79,7 +79,7 @@ $(document).ready(function () {
     });
   }
 
-  $(".publication__video").on("click", function () {
+  $(".publication__video").on("click", function (e) {
     if ($(this)[0] != $(".publication__video:first")[0]) {
       $(".publication__video:first").parent().before($(this).parent());
       $("#tab-2")
@@ -93,10 +93,6 @@ $(document).ready(function () {
 
       pauseVideo($(this).find("video"));
     }
-  });
-
-  $(document).on("click", function (e) {
-    console.log(e.target);
   });
 
   //==================SLIDER================================================

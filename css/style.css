@@ -721,6 +721,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tabs__item:nth-child(2) .tabs__wrap .publication {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 0;
 }
 
@@ -1192,7 +1195,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 15px;
   font-family: "Gordita-Regular";
   font-size: 18px;
-  color: rgba(10, 39, 131, 0.5);
+  color: #000000;
   font-weight: 400;
   line-height: 120%;
 }
@@ -1207,17 +1210,22 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 140%;
   background: none;
   border: 2px solid #ffffff;
-  padding: 14px 50px 14px 0;
+  padding: 14px 0 14px 0;
   max-width: 270px;
 }
 
-.footer__button::before {
+.footer__button span {
+  position: relative;
+  padding-right: 50px;
+}
+
+.footer__button span::before {
   content: "";
   position: absolute;
   width: 31px;
   height: 16px;
-  top: 38%;
-  right: 50px;
+  top: 29%;
+  right: 0%;
   background: url("../img/icon/icon-arrow-footer.svg") no-repeat;
 }
 
@@ -1338,6 +1346,121 @@ h1, h2, h3, h4, h5, h6 {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+.juridical__item::before {
+  -webkit-animation: line 1s ease-out;
+          animation: line 1s ease-out;
+}
+
+@-webkit-keyframes line {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+@keyframes line {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+
+.form__submit {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.form__submit:hover {
+  -webkit-transform: translate(30px, 0);
+          transform: translate(30px, 0);
+}
+
+.btn {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #0a2783;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+.btn span::before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  color: #ffffff;
+}
+
+.btn:hover::before {
+  width: 100%;
+}
+
+.btn:hover span::before {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+  right: -15px;
+}
+
+.footer__button {
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.footer__button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+
+.footer__button span::before {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__button:hover {
+  color: #0a2783;
+}
+
+.footer__button:hover::before {
+  width: 100%;
+}
+
+.footer__button:hover span::before {
+  background: url("../img/icon/icon-arrow-footer-2.svg") no-repeat;
+  right: -10px;
+}
+
+.footer__social svg path {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__social a:hover svg path {
+  fill-opacity: 1 !important;
+}
+
 @media (max-width: 1880px) {
   .container {
     max-width: 1650px;

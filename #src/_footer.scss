@@ -88,13 +88,7 @@
       max-width: 270px;
       padding: 18px 18px 18px 30px;
       margin-bottom: 15px;
-      @include font-param(
-        "Gordita-Regular",
-        18px,
-        rgba(10, 39, 131, 0.5),
-        400,
-        120%
-      );
+      @include font-param("Gordita-Regular", 18px, #000000, 400, 120%);
     }
   }
   &__button {
@@ -103,16 +97,20 @@
     @include font-param("Gordita-Medium", 18px, #ffffff, 500, 140%);
     background: none;
     border: 2px solid #ffffff;
-    padding: 14px 50px 14px 0;
+    padding: 14px 0 14px 0;
     max-width: 270px;
-    &::before {
-      content: "";
-      position: absolute;
-      width: 31px;
-      height: 16px;
-      top: 38%;
-      right: 50px;
-      background: url("../img/icon/icon-arrow-footer.svg") no-repeat;
+    & span {
+      position: relative;
+      padding-right: 50px;
+      &::before {
+        content: "";
+        position: absolute;
+        width: 31px;
+        height: 16px;
+        top: 29%;
+        right: 0%;
+        background: url("../img/icon/icon-arrow-footer.svg") no-repeat;
+      }
     }
   }
 
