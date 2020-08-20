@@ -280,9 +280,6 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 
   &__item {
     display: none;
-    &:hover {
-      cursor: pointer;
-    }
     &.active {
       display: block;
     }
@@ -313,6 +310,59 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
       left: 0;
       z-index: -1;
       max-width: 100%;
+    }
+
+    &__discription {
+      display: none;
+      padding-right: 30px;
+    }
+
+    video {
+      // flex: 1 1 auto;
+      max-width: 99.9%;
+      max-height: 600px;
+      background-color: rgba(4%, 14%, 51%, 0.7);
+    }
+    &__video {
+      display: flex;
+      // flex: 1 1 auto;
+      width: 100%;
+      position: relative;
+      min-height: 100%;
+    }
+    &__video-prev {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      & span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 110px;
+        height: 110px;
+        background: url("../img/icon/icon-play-video.svg") no-repeat 72% 50%;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+      }
+      &:hover {
+        & span {
+          box-shadow: 0 0 5px 5px #ffffff;
+        }
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url("../img/dots-publish.svg") no-repeat 30px 20px,
+          rgba(4%, 14%, 51%, 0.7);
+        transition: all 0.3s ease;
+      }
     }
   }
 
@@ -386,12 +436,15 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
       grid-template-areas:
         "clo1 clo4 clo4"
         "clo1 clo2 clo3";
+
       & .publication {
-        justify-content: flex-end;
+        // justify-content: flex-end;
         padding: 0;
+
         &:nth-child(1) {
           grid-area: clo1;
         }
+
         &:nth-child(2) {
           grid-area: clo2;
           & .publication__video-prev {
@@ -415,6 +468,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             }
           }
         }
+
         &:nth-child(3) {
           grid-area: clo3;
           & .publication__video-prev {
@@ -431,77 +485,31 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             }
           }
         }
+
         &:nth-child(4) {
-          align-items: flex-start;
+          // align-items: flex-start;
           grid-area: clo4;
           .publication__discription {
             display: block;
           }
         }
-        &__discription {
-          display: none;
-          padding-right: 30px;
-        }
+
         &__name {
           color: #0a2783;
           font-size: 36px;
           margin-bottom: 30px;
         }
-        video {
-          flex: 1 1 auto;
-          max-width: 99.9%;
-          max-height: 600px;
-          background-color: rgba(4%, 14%, 51%, 0.7);
-        }
-        &__video {
-          display: flex;
-          flex: 1 1 auto;
-          position: relative;
-          min-height: 100%;
-        }
-        &__video-prev {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          & span {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 110px;
-            height: 110px;
-            background: url("../img/icon/icon-play-video.svg") no-repeat 72% 50%;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-          }
-          &:hover {
-            & span {
-              box-shadow: 0 0 5px 5px #ffffff;
-            }
-          }
-          &::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            background: url("../img/dots-publish.svg") no-repeat 30px 20px,
-              rgba(4%, 14%, 51%, 0.7);
-            transition: all 0.3s ease;
-          }
-        }
       }
     }
   }
+
   &__item:nth-child(3) {
     & .tabs__wrap {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       grid-template-rows: 285px 285px;
       gap: 30px;
+
       & .publication {
         &__group {
           z-index: 10;
