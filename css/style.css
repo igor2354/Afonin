@@ -143,7 +143,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 31px;
   height: 16px;
   right: 0;
-  top: 36%;
+  top: 32%;
   background: url("../img/icon/btn-arrow.svg");
 }
 
@@ -1224,7 +1224,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   width: 31px;
   height: 16px;
-  top: 29%;
+  top: 20%;
   right: 0%;
   background: url("../img/icon/icon-arrow-footer.svg") no-repeat;
 }
@@ -1347,8 +1347,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Активная точка */
 /* Элемент точки */
 .juridical__item::before {
-  -webkit-animation: line 1s ease-out;
-          animation: line 1s ease-out;
+  -webkit-animation: line 0.5s linear;
+          animation: line 0.5s linear;
 }
 
 @-webkit-keyframes line {
