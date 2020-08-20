@@ -143,7 +143,9 @@ h1, h2, h3, h4, h5, h6 {
   width: 31px;
   height: 16px;
   right: 0;
-  top: 32%;
+  top: 60%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   background: url("../img/icon/btn-arrow.svg");
 }
 
@@ -1347,8 +1349,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Активная точка */
 /* Элемент точки */
 .juridical__item::before {
-  -webkit-animation: line 0.5s linear;
-          animation: line 0.5s linear;
+  -webkit-animation: line 0.3s linear;
+          animation: line 0.3s linear;
 }
 
 @-webkit-keyframes line {
