@@ -95,6 +95,10 @@ $(document).ready(function () {
     }
   });
 
+  $(document).on("click", function (e) {
+    console.log(e.target);
+  });
+
   //==================SLIDER================================================
   $(".reviews__slider-1").slick({
     arrows: true,
