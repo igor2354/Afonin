@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   display: block;
   position: relative;
-  padding: 27px 0 30px 0;
+  padding: 30px 0 30px 0;
   text-align: center;
   width: 420px;
   border: 2px solid #0a2783;
@@ -1212,7 +1212,7 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 140%;
   background: none;
   border: 2px solid #ffffff;
-  padding: 14px 0 14px 0;
+  padding: 17px 0 14px 0;
   max-width: 270px;
 }
 
