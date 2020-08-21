@@ -133,6 +133,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn span {
+  display: inline-block;
   position: relative;
   padding-right: 45px;
 }
@@ -1217,6 +1218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer__button span {
+  display: inline-block;
   position: relative;
   padding-right: 50px;
 }
