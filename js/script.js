@@ -17,6 +17,12 @@ $(document).ready(function () {
     }
   });
 
+  //=====================BURGER=============================================
+
+  $(".header__burger").on("click", function () {
+    $(this).toggleClass("active");
+  });
+
   //=====================TABS================================================
 
   $(".tabs__button").on("click", function (event) {
@@ -106,10 +112,26 @@ $(document).ready(function () {
     slidesToShow: 5,
     centerMode: true,
     centerPadding: "0",
+    responsive: [
+      {
+        breakpoint: 1700,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   });
   $(".mass-media__slider").slick({
     arrows: true,
     slidesToShow: 4,
     centerMode: true,
+    responsive: [
+      {
+        breakpoint: 1500,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+    ],
   });
 });

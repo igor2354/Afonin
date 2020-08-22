@@ -254,7 +254,61 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.header__burger {
+  display: none;
+  margin-left: 30px;
+  position: relative;
+  width: 45px;
+  height: 30px;
+}
+
+.header__burger span {
+  position: absolute;
+  width: 45px;
+  height: 3px;
+  top: 14px;
+  left: 0;
+  background: #0a2783;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__burger::before, .header__burger::after {
+  content: "";
+  position: absolute;
+  width: 45px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #0a2783;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.header__burger::after {
+  top: auto;
+  bottom: 0;
+}
+
+.header__burger.active span {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.header__burger.active::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 13px;
+}
+
+.header__burger.active::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 14px;
+}
+
 .juridical {
+  background: url("../img/image-1.png") no-repeat 100% 40%;
   position: relative;
   padding: 90px 0 245px 0;
   background-color: #f5faff;
@@ -314,19 +368,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #0a2783;
 }
 
-.juridical__image {
-  position: absolute;
-  display: block;
-  top: 50%;
-  left: 54%;
-  -webkit-transform: translate(0px, -50%);
-          transform: translate(0px, -50%);
-}
-
-.juridical__image img {
-  max-width: 100%;
-}
-
 .trust {
   background: url("../img/dots.svg") no-repeat 100% 11%;
   padding: 90px 0;
@@ -365,9 +406,9 @@ h1, h2, h3, h4, h5, h6 {
   display: -ms-flexbox;
   display: flex;
   padding: 0 15px;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 33.333%;
-          flex: 0 1 33.333%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
   margin-bottom: 30px;
 }
 
@@ -1471,5 +1512,26 @@ h1, h2, h3, h4, h5, h6 {
   }
   .mass-media__slide img {
     max-width: 250px;
+  }
+}
+
+@media (max-width: 1700px) {
+  .container {
+    max-width: 1450px;
+  }
+  .header__nav {
+    display: none;
+  }
+  .header__burger {
+    display: block;
+  }
+}
+
+@media (max-width: 1500px) {
+  .container {
+    max-width: 1100px;
+  }
+  .reviews .slider-1__coment {
+    max-width: 800px;
   }
 }

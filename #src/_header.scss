@@ -61,4 +61,48 @@
       cursor: pointer;
     }
   }
+  &__burger {
+    display: none;
+    margin-left: 30px;
+    position: relative;
+    width: 45px;
+    height: 30px;
+    & span {
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      top: 14px;
+      left: 0;
+      background: #0a2783;
+      transition: all 0.3s ease;
+    }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 45px;
+      height: 3px;
+      top: 0;
+      left: 0;
+      background: #0a2783;
+      transition: all 0.3s ease;
+    }
+    &::after {
+      top: auto;
+      bottom: 0;
+    }
+    &.active {
+      & span {
+        transform: scale(0);
+      }
+      &::before {
+        transform: rotate(45deg);
+        top: 13px;
+      }
+      &::after {
+        transform: rotate(-45deg);
+        bottom: 14px;
+      }
+    }
+  }
 }
