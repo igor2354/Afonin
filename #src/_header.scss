@@ -26,9 +26,22 @@
       margin-right: 0;
     }
     & a {
+      position: relative;
       color: inherit;
       &:hover {
         color: #0a2783;
+      }
+      &.active {
+        color: #0a2783;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -10px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #0a2783;
+        }
       }
     }
   }

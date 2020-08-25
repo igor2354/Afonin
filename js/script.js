@@ -134,4 +134,37 @@ $(document).ready(function () {
       },
     ],
   });
+
+  //======================scrollbar=================
+  $(".scrollbar-rail").scrollbar();
+
+  //=================POPUP========================
+  $.each($(".team__wrap"), function (index, val) {
+    $(val).on("click", function () {
+      $(".popup").addClass("open");
+      $(".popup__university").text($(this).find($(".team__info-edu")).text());
+      $(".popup__spec-dicript").text(
+        $(this).find($(".team__info-spec")).text()
+      );
+      $(".popup__contact-email").text(
+        $(this).find($(".team__info-contact")).text()
+      );
+      $(".popup__name").text($(this).find($(".team__name")).text());
+      $(".popup__post").text($(this).find($(".team__info-post")).text());
+      $(".popup__image")
+        .find("img")
+        .attr("src", $(this).find($("img")).attr("src"));
+    });
+  });
+  $.each($(".popup__close"), function (index, val) {
+    $(val).on("click", function () {
+      $(".popup").removeClass("open");
+    });
+  });
+  $(".popup__body").on("click", function (e) {
+    if (e.target === $(".popup__body")[0]) {
+      $(".popup").removeClass("open");
+    }
+    e.stopPropagation();
+  });
 });
