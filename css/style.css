@@ -323,8 +323,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team {
-  background: #f5faff;
+  background: url("../img/dots-team.svg") no-repeat 100% 6%, #f5faff;
   padding: 90px 0;
+}
+
+.team.scrolled {
+  margin-top: 141px;
 }
 
 .team__title {
@@ -351,9 +355,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .team__wrap {
-  text-align: center;
   position: relative;
-  min-height: 520px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -367,6 +369,8 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 520px;
+  text-align: center;
   padding: 0 30px 30px 30px;
 }
 
@@ -381,7 +385,7 @@ h1, h2, h3, h4, h5, h6 {
   height: 300px;
   border-radius: 50%;
   border: 1px solid #ffffff;
-  z-index: 1;
+  z-index: 11;
   visibility: hidden;
 }
 
@@ -394,7 +398,9 @@ h1, h2, h3, h4, h5, h6 {
   height: 90px;
   border-radius: 50%;
   background: url("../img/icon/icon-arrow-team.svg") no-repeat 50% 50%, #ffffff;
-  z-index: 2;
+  z-index: 11;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .team__wrap:hover::before {
@@ -407,9 +413,9 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.team__wrap:hover .team__image {
-  -webkit-clip-path: none;
-          clip-path: none;
+.team__wrap:hover .team__image img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 .team__wrap:hover .team__image::before {
@@ -435,22 +441,13 @@ h1, h2, h3, h4, h5, h6 {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 120px;
           flex: 0 1 120px;
+  z-index: 10;
 }
 
 .team__image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  -webkit-clip-path: url(#clipping);
-          clip-path: url(#clipping);
-}
-
-.team__image #clipping circle {
-  cx: 70%;
-  cy: 180;
-  r: 150;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .team__image::before {
@@ -460,6 +457,20 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   background: rgba(10, 39, 131, 0.5);
+  z-index: 10;
+}
+
+.team__image svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .team__name {
@@ -486,7 +497,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .popup {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -494,10 +506,19 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   background: rgba(10, 39, 131, 0.5);
   z-index: 100;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .popup.open {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup.open .popup__content {
+  opacity: 1;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
 }
 
 .popup__body {
@@ -521,6 +542,11 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   max-width: 1170px;
   max-height: 676px;
+  opacity: 0;
+  -webkit-transform: translate(0, -100%);
+          transform: translate(0, -100%);
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
 }
 
 .popup__close {
@@ -544,6 +570,13 @@ h1, h2, h3, h4, h5, h6 {
   width: 24px;
   height: 24px;
   background: url("../img/icon/icon-close.svg") no-repeat;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.popup__close:hover::before {
+  -webkit-transform: translate(-50%, -50%) rotate(90deg);
+          transform: translate(-50%, -50%) rotate(90deg);
 }
 
 .popup__person {
@@ -560,23 +593,21 @@ h1, h2, h3, h4, h5, h6 {
           flex: 36%;
 }
 
-.popup__person img {
-  max-width: 100%;
-}
-
 .popup__image {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-flex: 1;
-      -ms-flex: 1 1 520px;
-          flex: 1 1 520px;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .popup__image img {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  max-width: 100%;
+  max-height: 520px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 420px;
+          flex: 0 1 420px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -657,6 +688,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .popup__spec-name {
   font-family: "Gordita-Medium";
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 .juridical {

@@ -4,10 +4,12 @@ $(document).ready(function () {
     if (scrolled > 141) {
       $(".header").addClass("scrolled");
       $(".juridical").addClass("scrolled");
+      $(".team").addClass("scrolled");
     }
     if (scrolled <= 141) {
       $(".header").removeClass("scrolled");
       $(".juridical").removeClass("scrolled");
+      $(".team").removeClass("scrolled");
     }
   });
 
@@ -142,6 +144,7 @@ $(document).ready(function () {
   $.each($(".team__wrap"), function (index, val) {
     $(val).on("click", function () {
       $(".popup").addClass("open");
+      $("body").addClass("lock");
       $(".popup__university").text($(this).find($(".team__info-edu")).text());
       $(".popup__spec-dicript").text(
         $(this).find($(".team__info-spec")).text()
@@ -153,18 +156,33 @@ $(document).ready(function () {
       $(".popup__post").text($(this).find($(".team__info-post")).text());
       $(".popup__image")
         .find("img")
-        .attr("src", $(this).find($("img")).attr("src"));
+        .attr("src", $(this).find($("image")).attr("xlink:href"));
     });
   });
   $.each($(".popup__close"), function (index, val) {
     $(val).on("click", function () {
       $(".popup").removeClass("open");
+      $("body").removeClass("lock");
     });
   });
   $(".popup__body").on("click", function (e) {
     if (e.target === $(".popup__body")[0]) {
       $(".popup").removeClass("open");
+      $("body").removeClass("lock");
     }
     e.stopPropagation();
+  });
+
+  //================HOVER POPUP=========================
+  $.each($(".team__wrap"), function (index, val) {
+    $(val).hover(
+      function () {
+        $(this).find($("circle")).attr({ r: "100%" });
+        console.log($(this).find($("circle")));
+      },
+      function () {
+        $(this).find($("circle")).attr({ r: "150" });
+      }
+    );
   });
 });

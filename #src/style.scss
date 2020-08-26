@@ -2,18 +2,15 @@
   font-family: "Gordita-Bold";
   src: url("../fonts/Gordita-Bold.eot");
   src: local("Gordita-Bold"), url("../fonts/Gordita-Bold.woff") format("woff"),
-    url("../fonts/Gordita-Bold.ttf") format("truetype"),
-    url("../fonts/Gordita-Bold.svg") format("svg");
+    url("../fonts/Gordita-Bold.ttf") format("truetype"), url("../fonts/Gordita-Bold.svg") format("svg");
   font-weight: 700;
   font-style: bold;
 }
 @font-face {
   font-family: "Gordita-Medium";
   src: url("../fonts/Gordita-Medium.eot");
-  src: local("Gordita-Medium"),
-    url("../fonts/Gordita-Medium.woff") format("woff"),
-    url("../fonts/Gordita-Medium.ttf") format("truetype"),
-    url("../fonts/Gordita-Medium.svg") format("svg");
+  src: local("Gordita-Medium"), url("../fonts/Gordita-Medium.woff") format("woff"),
+    url("../fonts/Gordita-Medium.ttf") format("truetype"), url("../fonts/Gordita-Medium.svg") format("svg");
   font-weight: 500;
   font-style: medium;
 }
@@ -21,10 +18,8 @@
 @font-face {
   font-family: "Gordita-Regular";
   src: url("../fonts/Gordita-Regular.eot");
-  src: local("Gordita-Regular"),
-    url("../fonts/Gordita-Regular.woff") format("woff"),
-    url("../fonts/Gordita-Regular.ttf") format("truetype"),
-    url("../fonts/Gordita-Regular.svg") format("svg");
+  src: local("Gordita-Regular"), url("../fonts/Gordita-Regular.woff") format("woff"),
+    url("../fonts/Gordita-Regular.ttf") format("truetype"), url("../fonts/Gordita-Regular.svg") format("svg");
   font-weight: 400;
   font-style: normal;
 }
@@ -37,9 +32,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   /*pcSize - МАКЕТНЫЙ РАЗМЕР ШРИФТА*/ /*МИНИМАЛЬНЫЙ РАЗМЕР ШРИФТА*/
   $addSize: $pcSize - $mobSize;
   $maxWidth: $maxWidth - 320;
-  font-size: calc(
-    #{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth})
-  );
+  font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
 }
 
 ////////////////////////////////////////////////СТИЛИ ШРИФТОВ////////////////////////////////////////////////////
@@ -69,6 +62,10 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 @import "_style-page-team";
 
 ///////////////////////////////////////////////ОСНОВНОЙ КОНТЕНТ////////////////////////////////////////////////////
+
+body.lock {
+  overflow: hidden;
+}
 
 //============БЛОК-1==========
 .juridical {
@@ -147,8 +144,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 //==================БЛОК-3========
 
 .services {
-  background: url("../img/dots.svg") no-repeat 100% 1%,
-    url("../img/dots-rewers.svg") no-repeat 0% 94%;
+  background: url("../img/dots.svg") no-repeat 100% 1%, url("../img/dots-rewers.svg") no-repeat 0% 94%;
   padding: 30px 0 65px 0;
   &__title {
     color: #0a2783;
@@ -243,8 +239,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 
 .publish {
   padding: 90px 0;
-  background: url("../img/dots-publish-horizontal.svg") no-repeat 100% 18%,
-    #f5faff;
+  background: url("../img/dots-publish-horizontal.svg") no-repeat 100% 18%, #f5faff;
 
   &__title {
     color: #0a2783;
@@ -264,13 +259,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   }
 
   &__button {
-    @include font-param(
-      "Gordita-Regular",
-      24px,
-      rgba(10, 39, 131, 0.5),
-      400,
-      120%
-    );
+    @include font-param("Gordita-Regular", 24px, rgba(10, 39, 131, 0.5), 400, 120%);
     width: 290px;
     text-align: center;
     padding: 32px 0;
@@ -364,8 +353,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
         height: 100%;
         top: 0;
         left: 0;
-        background: url("../img/dots-publish.svg") no-repeat 30px 20px,
-          rgba(4%, 14%, 51%, 0.7);
+        background: url("../img/dots-publish.svg") no-repeat 30px 20px, rgba(4%, 14%, 51%, 0.7);
         transition: all 0.3s ease;
       }
     }
@@ -406,13 +394,11 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             font-size: 36px;
           }
           &::before {
-            background: url("../img/dots-publish.svg") no-repeat 30px 20px,
-              rgba(4%, 14%, 51%, 0.7);
+            background: url("../img/dots-publish.svg") no-repeat 30px 20px, rgba(4%, 14%, 51%, 0.7);
           }
           &:hover {
             &::before {
-              background: url("../img/dots-publish.svg") no-repeat 30px 20px,
-                rgba(4%, 14%, 51%, 1);
+              background: url("../img/dots-publish.svg") no-repeat 30px 20px, rgba(4%, 14%, 51%, 1);
             }
           }
         }
@@ -457,8 +443,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             & span {
               width: 75px;
               height: 75px;
-              background: url("../img/icon/icon-play-video.svg") no-repeat 72%
-                50% / 43px 43px;
+              background: url("../img/icon/icon-play-video.svg") no-repeat 72% 50% / 43px 43px;
             }
             &::before {
               content: "";
@@ -467,9 +452,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
               height: 100%;
               top: 0;
               left: 0;
-              background: url("../img/dots-publish.svg") no-repeat 30px 20px /
-                  54px 156px,
-                rgba(4%, 14%, 51%, 0.7);
+              background: url("../img/dots-publish.svg") no-repeat 30px 20px / 54px 156px, rgba(4%, 14%, 51%, 0.7);
               transition: all 0.3s ease;
             }
           }
@@ -481,13 +464,10 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
             & span {
               width: 75px;
               height: 75px;
-              background: url("../img/icon/icon-play-video.svg") no-repeat 72%
-                50% / 43px 43px;
+              background: url("../img/icon/icon-play-video.svg") no-repeat 72% 50% / 43px 43px;
             }
             &::before {
-              background: url("../img/dots-publish.svg") no-repeat 30px 20px /
-                  54px 156px,
-                rgba(4%, 14%, 51%, 0.7);
+              background: url("../img/dots-publish.svg") no-repeat 30px 20px / 54px 156px, rgba(4%, 14%, 51%, 0.7);
             }
           }
         }
@@ -555,8 +535,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
   margin-bottom: 30px;
   &__slide {
     padding: 55px 0 60px 0;
-    background: url("../img/dots-slider.svg") no-repeat 2% 10%,
-      url("../img/dots-slider.svg") no-repeat 98% 90%, #ffffff;
+    background: url("../img/dots-slider.svg") no-repeat 2% 10%, url("../img/dots-slider.svg") no-repeat 98% 90%, #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -628,8 +607,7 @@ $maxWidth: 1800; /*ШИРИНА МАКЕТА*/
 //=====================БЛОК-7======================
 .message {
   padding: 90px 0;
-  background: url("../img/message-bg.svg") no-repeat 100% 80%,
-    url("../img/dots-message.svg") no-repeat 100% 10%;
+  background: url("../img/message-bg.svg") no-repeat 100% 80%, url("../img/dots-message.svg") no-repeat 100% 10%;
 
   &__title {
     color: #0a2783;
