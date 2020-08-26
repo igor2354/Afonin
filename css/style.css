@@ -413,7 +413,11 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease;
 }
 
-.team__wrap:hover .team__image img {
+.team__wrap:hover::after {
+  background: url("../img/icon/icon-arrow-team.svg") no-repeat 50% 50%, #b9c6e4;
+}
+
+.team__wrap:hover .team__image svg {
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
@@ -567,8 +571,8 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
   background: url("../img/icon/icon-close.svg") no-repeat;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;

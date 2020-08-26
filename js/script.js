@@ -178,7 +178,6 @@ $(document).ready(function () {
     $(val).hover(
       function () {
         $(this).find($("circle")).attr({ r: "100%" });
-        console.log($(this).find($("circle")));
       },
       function () {
         $(this).find($("circle")).attr({ r: "150" });
