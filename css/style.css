@@ -608,6 +608,7 @@ body.lock {
   color: #ffffff;
   font-weight: 400;
   line-height: 120%;
+  margin-bottom: 10px;
 }
 
 .publication-1__name {
@@ -1804,7 +1805,7 @@ body.lock {
 .article__title {
   color: #0a2783;
   margin-bottom: 60px;
-  max-width: 750px;
+  max-width: 850px;
 }
 
 .article__image {
@@ -2194,12 +2195,28 @@ body.lock {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
-.news__wrap {
+.news__wrap:nth-child(3n + 1) {
   -webkit-transform: translate(0px, 100px);
           transform: translate(0px, 100px);
   opacity: 0;
   -webkit-transition: all 1s ease;
   transition: all 1s ease;
+}
+
+.news__wrap:nth-child(3n + 2) {
+  -webkit-transform: translate(0px, 120px);
+          transform: translate(0px, 120px);
+  opacity: 0;
+  -webkit-transition: all 1.2s ease;
+  transition: all 1.2s ease;
+}
+
+.news__wrap:nth-child(3n + 3) {
+  -webkit-transform: translate(0px, 150px);
+          transform: translate(0px, 150px);
+  opacity: 0;
+  -webkit-transition: all 1.4s ease;
+  transition: all 1.4s ease;
 }
 
 .news__wrap.animate {
