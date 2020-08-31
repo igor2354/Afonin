@@ -2194,6 +2194,20 @@ body.lock {
 /* Точки (булиты) */
 /* Активная точка */
 /* Элемент точки */
+.news__wrap {
+  -webkit-transform: translate(0px, 100px);
+          transform: translate(0px, 100px);
+  opacity: 0;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.news__wrap.animate {
+  -webkit-transform: translate(0px, 0);
+          transform: translate(0px, 0);
+  opacity: 1;
+}
+
 .juridical__item::before {
   -webkit-animation: line 0.3s linear;
           animation: line 0.3s linear;
