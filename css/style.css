@@ -1650,6 +1650,7 @@ body.lock {
           flex-direction: column;
   min-height: 800px;
   border: 5px solid #f0f6fb;
+  color: #000000;
 }
 
 .entry__image {
@@ -1680,7 +1681,7 @@ body.lock {
 .entry__data {
   font-family: "Gordita-Medium";
   font-size: 24px;
-  color: #000000;
+  color: inherit;
   font-weight: 500;
   line-height: 120%;
   margin-bottom: 15px;
@@ -1689,7 +1690,7 @@ body.lock {
 .entry__name {
   font-family: "Gordita-Medium";
   font-size: 28px;
-  color: #000000;
+  color: inherit;
   font-weight: 500;
   line-height: 140%;
   margin-bottom: 30px;
@@ -1698,7 +1699,7 @@ body.lock {
 .entry__discription {
   font-family: "Gordita-Regular";
   font-size: 18px;
-  color: #000000;
+  color: inherit;
   font-weight: 400;
   line-height: 140%;
   margin-bottom: 20px;
@@ -1947,7 +1948,23 @@ body.lock {
 }
 
 .analytics__entry .entry__item {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   min-height: 480px;
+}
+
+.analytics__entry .entry__item:hover {
+  background: #0a2783;
+  border-color: #0a2783;
+  color: #ffffff;
+}
+
+.analytics__entry .entry__item:hover .entry__btn span {
+  color: #ffffff;
+}
+
+.analytics__entry .entry__item:hover .entry__btn span::before {
+  background: url("../img/icon/btn-arrow-white.svg");
 }
 
 .footer {
