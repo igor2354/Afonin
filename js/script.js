@@ -36,16 +36,13 @@ function pauseVideo(element) {
 $(document).ready(function () {
   $(window).on("scroll", function () {
     let scrolled = $(this).scrollTop();
-    let srcollElem = [".header", ".juridical", ".team", ".support", ".news", ".article"];
     if (scrolled > 141) {
-      $.each(srcollElem, function (index, val) {
-        $(val).addClass("scrolled");
-      });
+      $(".header").addClass("scrolled");
+      $(".header").next().addClass("scrolled");
     }
     if (scrolled <= 141) {
-      $.each(srcollElem, function (index, val) {
-        $(val).removeClass("scrolled");
-      });
+      $(".header").removeClass("scrolled");
+      $(".header").next().removeClass("scrolled");
     }
   });
 
