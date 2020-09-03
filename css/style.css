@@ -953,7 +953,7 @@ body.lock {
 
 .mass-media__title {
   color: #0a2783;
-  margin-bottom: 55px;
+  margin-bottom: 80px;
 }
 
 .mass-media__slider {
@@ -2633,30 +2633,39 @@ body.lock {
 
 @media (max-width: 1880px) {
   .container {
-    max-width: 1650px;
+    max-width: 1600px;
+  }
+  .juridical {
+    background: url("../img/image-1.png") no-repeat 100% 40%/48%, #f5faff;
+    padding: 90px 0 120px 0;
+  }
+  .trust {
+    background: url("../img/dots.svg") no-repeat 100% 12%/45%;
+  }
+  .services {
+    background: url("../img/dots.svg") no-repeat 100% 1%/45%, url("../img/dots-rewers.svg") no-repeat 0% 95%/35%;
+  }
+  .publish {
+    background: url("../img/dots-publish-horizontal.svg") no-repeat 100% 18.5%/40%, #f5faff;
+  }
+  .reviews .slider-1__coment {
+    max-width: 1000px;
   }
   .mass-media__slide img {
     max-width: 250px;
   }
-}
-
-@media (max-width: 1700px) {
-  .container {
-    max-width: 1450px;
+  .message {
+    background: url("../img/message-bg.svg") no-repeat 100% 50%/50%, url("../img/dots-message.svg") no-repeat 100% 10%/30%;
   }
-  .header__nav {
-    display: none;
+  .footer {
+    background: url("../img/dots-footer.svg") no-repeat 0% 70%/17%, #0a2783;
   }
-  .header__burger {
-    display: block;
+  .item-team {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 400px;
+            flex: 0 1 400px;
   }
-}
-
-@media (max-width: 1500px) {
-  .container {
-    max-width: 1100px;
-  }
-  .reviews .slider-1__coment {
-    max-width: 800px;
+  .item-team__name, .team-article__name {
+    font-size: 30px;
   }
 }
