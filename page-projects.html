@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/jquery.scrollbar.css" />
     <title>Афонин, Божор и партнёры</title>
   </head>
   <body>
@@ -12,15 +13,15 @@
         <div class="container">
           <div class="header__row">
             <div class="header__logo">
-              <a href="./index.html"><img src="./img/icon/logo.svg" alt="logo" /></a>
+              <a href="/index.html"><img src="./img/icon/logo.svg" alt="logo" /></a>
             </div>
             <nav class="header__nav">
               <ul class="header__list">
                 <li class="header__item"><a href="./page-team.html">Команда</a></li>
                 <li class="header__item"><a href="./page-services.html">Услуги</a></li>
-                <li class="header__item"><a class="active" href="./page-news.html">Новости</a></li>
+                <li class="header__item"><a href="./page-news.html">Новости</a></li>
                 <li class="header__item"><a href="./page-analytics.html">Аналитика</a></li>
-                <li class="header__item"><a href="./page-projects.html">Проекты</a></li>
+                <li class="header__item"><a class="active" href="./page-projects.html">Проекты</a></li>
                 <li class="header__item"><a href="./page-contact.html">Контакты</a></li>
               </ul>
             </nav>
@@ -35,22 +36,64 @@
           </div>
         </div>
       </header>
-      <section class="news">
+      <section class="projects">
         <div class="container">
-          <div class="news__row">
-            <h2 class="news__title title">Новости</h2>
-            <div class="news__column">
-              <div class="news__entry entry anim-items anim-no-scrollTop">
+          <div class="projects__row">
+            <h2 class="projects__title title">Проекты и клиенты</h2>
+            <div class="projects__column">
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
                 <div class="entry__item">
                   <div class="entry__image">
-                    <img src="./img/publish/image-publish-1.jpg" alt="" />
+                    <img src="./img/icon/reviews/icon-reviews-4.png" alt="" />
                   </div>
                   <div class="entry__group">
-                    <div class="entry__data">22/07/2020</div>
-                    <div class="entry__name">Видеоправосудие: от эйфории к скучной реальности</div>
-                    <div class="entry__discription">
-                      Во время действия ограничений, вызванных коронавирусом, судебная система столкнулась с серьезной проблемой...
+                    <div class="entry__data">Телемедицинский сервис iBolit</div>
+                    <div class="entry__name">Разработали необходимую документацию для оказания телемедицинских услуг</div>
+                    <div class="entry__btn">
+                      <a href="./page-article-projects.html"><span>Подробнее</span></a>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
+                <div class="entry__item">
+                  <div class="entry__image">
+                    <img src="./img/icon/reviews/icon-reviews-1.png" alt="" />
+                  </div>
+                  <div class="entry__group">
+                    <div class="entry__data">Площадка для блогеров и рекламодателей Getblogger</div>
+                    <div class="entry__name">Обеспечено постоянное взаимодействие между ответственными сотрудниками клиента и юристом</div>
+                    <div class="entry__btn">
+                      <a href=""><span>Подробнее</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
+                <div class="entry__item">
+                  <div class="entry__image">
+                    <img src="./img/icon/reviews/icon-rewiews-6.png" alt="" />
+                  </div>
+                  <div class="entry__group">
+                    <div class="entry__data">Сервис по поиску врачей и телемедицинский оператор. Входит в Группу компаний СБЕРБАНК</div>
+                    <div class="entry__name">Обеспечили постоянное правовое сопровождение</div>
+                    <div class="entry__btn">
+                      <a href=""><span>Подробнее</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
+                <div class="entry__item">
+                  <div class="entry__image">
+                    <img src="./img/icon/reviews/icon-reviews-5.png" alt="" />
+                  </div>
+                  <div class="entry__group">
+                    <div class="entry__data">Ведущий сервис онлайн–записи в России</div>
+                    <div class="entry__name">Провели юридический аудит для клиента по существующей договорной схеме</div>
                     <div class="entry__btn">
                       <a href="./page-article.html"><span>Подробнее</span></a>
                     </div>
@@ -58,17 +101,15 @@
                 </div>
               </div>
 
-              <div class="news__entry entry anim-items anim-no-scrollTop">
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
                 <div class="entry__item">
                   <div class="entry__image">
-                    <img src="./img/publish/image-publish-2.jpg" alt="" />
+                    <img src="./img/icon/reviews/icon-rewiews-7.png" alt="" />
                   </div>
                   <div class="entry__group">
-                    <div class="entry__data">07/03/2020</div>
-                    <div class="entry__name">В фокусе внимания Антимонопольного клуба антикартельный пакет</div>
-                    <div class="entry__discription">
-                      27 февраля 2020 года в г. Москве прошло очередное заседание Антимонопольного клуба организованное журналом
-                      «Конкуренция...
+                    <div class="entry__data">Самое большое сообщество по интересам в России «Плеяда»</div>
+                    <div class="entry__name">
+                      Клиент получил полный пакет документов для реализации нового направления в области краудфандинга
                     </div>
                     <div class="entry__btn">
                       <a href=""><span>Подробнее</span></a>
@@ -77,17 +118,14 @@
                 </div>
               </div>
 
-              <div class="news__entry entry anim-items anim-no-scrollTop">
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
                 <div class="entry__item">
                   <div class="entry__image">
-                    <img src="./img/publish/image-publish-3.jpg" alt="" />
+                    <img src="./img/icon/reviews/icon-rewiews-8.png" alt="" />
                   </div>
                   <div class="entry__group">
-                    <div class="entry__data">12/12/2019</div>
-                    <div class="entry__name">AI в юридическом бизнесе</div>
-                    <div class="entry__discription">
-                      Кратко о применении искусственного интеллекта в юридическом бизнесе в презентации Михаила Божора...
-                    </div>
+                    <div class="entry__data">Интернет-площадка для поиска  и выбора тренера по различным видам спорта</div>
+                    <div class="entry__name">Подготовили документы для клиента, позволяющие вести законную деятельность</div>
                     <div class="entry__btn">
                       <a href=""><span>Подробнее</span></a>
                     </div>
@@ -95,18 +133,29 @@
                 </div>
               </div>
 
-              <div class="news__entry entry anim-items anim-no-scrollTop">
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
                 <div class="entry__item">
                   <div class="entry__image">
-                    <img src="./img/publish/image-publish-4.jpg" alt="" />
+                    <img src="./img/icon/reviews/icon-reviews-4.png" alt="" />
                   </div>
                   <div class="entry__group">
-                    <div class="entry__data">10/12/2019</div>
-                    <div class="entry__name">Налоговые аспекты продвижения лекарственных средств</div>
-                    <div class="entry__discription">
-                      Сфера обращения лекарственных средств, включающая многочисленные этапы продвижения лекарственных средств на
-                      фармацевтическом рынке от разработчиков...
+                    <div class="entry__data">Телемедицинский сервис iBolit</div>
+                    <div class="entry__name">Разработали необходимую документацию для оказания телемедицинских услуг</div>
+                    <div class="entry__btn">
+                      <a href="./page-article.html"><span>Подробнее</span></a>
                     </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
+                <div class="entry__item">
+                  <div class="entry__image">
+                    <img src="./img/icon/reviews/icon-reviews-1.png" alt="" />
+                  </div>
+                  <div class="entry__group">
+                    <div class="entry__data">Площадка для блогеров и рекламодателей Getblogger</div>
+                    <div class="entry__name">Обеспечено постоянное взаимодействие между ответственными сотрудниками клиента и юристом</div>
                     <div class="entry__btn">
                       <a href=""><span>Подробнее</span></a>
                     </div>
@@ -114,91 +163,14 @@
                 </div>
               </div>
 
-              <div class="news__entry entry anim-items anim-no-scrollTop">
+              <div class="projects__entry entry anim-items anim-no-scrollTop">
                 <div class="entry__item">
                   <div class="entry__image">
-                    <img src="./img/publish/image-publish-5.jpg" alt="" />
+                    <img src="./img/icon/reviews/icon-rewiews-6.png" alt="" />
                   </div>
                   <div class="entry__group">
-                    <div class="entry__data">05/12/2019</div>
-                    <div class="entry__name">Как победить ФНС на стадии предпроверочного контроля, комиссий и требований</div>
-                    <div class="entry__discription">
-                      Основываясь на своей налоговой практике и опыте работы в структурах ФНС в прошлом, в этой статье я расскажу о
-                      стратегиях поведения
-                    </div>
-                    <div class="entry__btn">
-                      <a href=""><span>Подробнее</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="news__entry entry anim-items anim-no-scrollTop">
-                <div class="entry__item">
-                  <div class="entry__image">
-                    <img src="./img/publish/image-publish-6.jpg" alt="" />
-                  </div>
-                  <div class="entry__group">
-                    <div class="entry__data">27/11/2019</div>
-                    <div class="entry__name">Новое в регулировании работы «на удаленке»</div>
-                    <div class="entry__discription">
-                      Эпоха перехода бизнес-процессов в онлайн настала стремительно. В условиях нестабильной эпидемиологической ситуации...
-                    </div>
-                    <div class="entry__btn">
-                      <a href=""><span>Подробнее</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="news__entry entry anim-items anim-no-scrollTop">
-                <div class="entry__item">
-                  <div class="entry__image">
-                    <img src="./img/publish/image-publish-1.jpg" alt="" />
-                  </div>
-                  <div class="entry__group">
-                    <div class="entry__data">22/07/2020</div>
-                    <div class="entry__name">Видеоправосудие: от эйфории к скучной реальности</div>
-                    <div class="entry__discription">
-                      Во время действия ограничений, вызванных коронавирусом, судебная система столкнулась с серьезной проблемой...
-                    </div>
-                    <div class="entry__btn">
-                      <a href=""><span>Подробнее</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="news__entry entry anim-items anim-no-scrollTop">
-                <div class="entry__item">
-                  <div class="entry__image">
-                    <img src="./img/publish/image-publish-2.jpg" alt="" />
-                  </div>
-                  <div class="entry__group">
-                    <div class="entry__data">07/03/2020</div>
-                    <div class="entry__name">В фокусе внимания Антимонопольного клуба антикартельный пакет</div>
-                    <div class="entry__discription">
-                      27 февраля 2020 года в г. Москве прошло очередное заседание Антимонопольного клуба организованное журналом
-                      «Конкуренция...
-                    </div>
-                    <div class="entry__btn">
-                      <a href=""><span>Подробнее</span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="news__entry entry anim-items anim-no-scrollTop">
-                <div class="entry__item">
-                  <div class="entry__image">
-                    <img src="./img/publish/image-publish-3.jpg" alt="" />
-                  </div>
-                  <div class="entry__group">
-                    <div class="entry__data">12/12/2019</div>
-                    <div class="entry__name">AI в юридическом бизнесе</div>
-                    <div class="entry__discription">
-                      Кратко о применении искусственного интеллекта в юридическом бизнесе в презентации Михаила Божора...
-                    </div>
+                    <div class="entry__data">Сервис по поиску врачей и телемедицинский оператор. Входит в Группу компаний СБЕРБАНК</div>
+                    <div class="entry__name">Обеспечили постоянное правовое сопровождение</div>
                     <div class="entry__btn">
                       <a href=""><span>Подробнее</span></a>
                     </div>
