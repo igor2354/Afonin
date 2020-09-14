@@ -1,0 +1,60 @@
+.art-projects {
+    &__row {
+        &:first-child {
+            border-bottom: 2px solid #0a2783;
+            padding-bottom: 60px;
+        }
+        &:last-child {
+            padding-top: 30px;
+            .art-projects__column {
+                display: flex;
+            }
+        }
+    }
+
+    &__title {
+        @extend .article__title;
+        max-width: 1050px;
+    }
+
+    &__column {
+    }
+
+    &__left {
+        @extend .article__left;
+    }
+    &__right {
+        @extend .article__right;
+    }
+
+    &__client {
+        @include font-param("Gordita-Medium", 24px, #0a2783, 500, 120%);
+        margin-bottom: 10px;
+    }
+    &__firm {
+        @include font-param("Gordita-Medium", 24px, #000000, 500, 120%);
+        margin-bottom: 30px;
+    }
+    &__subtitle {
+        @include font-param("Gordita-Medium", 36px, #000000, 500, 120%);
+        margin: 30px 0;
+    }
+
+    &__logo {
+        & img {
+            object-fit: contain;
+            width: auto;
+            max-height: 120px;
+        }
+    }
+
+    &__text {
+        @extend .article__text;
+    }
+    & .article__group {
+        border: none;
+    }
+    & .article__back {
+        padding: 60px 0 0 0;
+    }
+}

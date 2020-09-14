@@ -1,3 +1,25 @@
+.entry {
+  &:nth-child(3n + 1) {
+    transform: translate(0px, 100px);
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  &:nth-child(3n + 2) {
+    transform: translate(0px, 120px);
+    opacity: 0;
+    transition: all 1.2s ease;
+  }
+  &:nth-child(3n + 3) {
+    transform: translate(0px, 150px);
+    opacity: 0;
+    transition: all 1.4s ease;
+  }
+  &.animate {
+    transform: translate(0px, 0);
+    opacity: 1;
+  }
+}
+
 .juridical {
   &__item {
     &::before {
