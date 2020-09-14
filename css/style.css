@@ -1734,6 +1734,15 @@ body.lock {
   margin-bottom: 20px;
 }
 
+.entry__btn span {
+  font-size: 18px;
+  padding-right: 34px;
+}
+
+.entry__btn span::before {
+  background: url("../img/icon/btn-arrow.svg") no-repeat 100%/75%;
+}
+
 .pagination {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3067,11 +3076,11 @@ body.lock {
     margin-bottom: 15px;
   }
   .entry__btn span {
-    padding-right: 34px;
-    font-size: 18px;
+    padding-right: 26px;
+    font-size: 14px;
   }
   .entry__btn span::before {
-    background: url("../img/icon/btn-arrow.svg") no-repeat 100%/75%;
+    background: url("../img/icon/btn-arrow.svg") no-repeat 100%/55%;
   }
   .pagination ul {
     margin: 0 -23px;
