@@ -60,16 +60,16 @@ $(document).ready(function () {
 
   //=====================TABS================================================
 
-  $(".tabs__button").on("click", function (event) {
+  $(".tab-btn").on("click", function (event) {
     event.preventDefault();
 
-    $(".tabs__button").removeClass("active");
-    $(".tabs__item").removeClass("active");
+    $(".tab-btn").removeClass("active");
+    $(".tab-item").removeClass("active");
 
     $(this).addClass("active");
     $($(this).attr("href")).addClass("active");
   });
-  $(".tabs__button:first").click();
+  $(".tab-btn:first").click();
 
   //=====================IMG TO BACKGROUND CSS================================
   $.each($(".ibg"), function (index, val) {
@@ -130,6 +130,38 @@ $(document).ready(function () {
     arrows: true,
     slidesToShow: 4,
     centerMode: true,
+    // responsive: [
+    //   {
+    //     breakpoint: 1500,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    // ],
+  });
+
+  $(".person__slider-1").slick({
+    arrows: true,
+    slidesToShow: 3,
+    dots: true,
+    appendArrows: $(".person__arrow-1"),
+    appendDots: $(".person__dots-1"),
+    // responsive: [
+    //   {
+    //     breakpoint: 1500,
+    //     settings: {
+    //       slidesToShow: 3,
+    //     },
+    //   },
+    // ],
+  });
+
+  $(".person__slider-2").slick({
+    arrows: true,
+    slidesToShow: 3,
+    dots: true,
+    appendArrows: $(".person__arrow-2"),
+    appendDots: $(".person__dots-2"),
     // responsive: [
     //   {
     //     breakpoint: 1500,
