@@ -1881,6 +1881,189 @@ body.lock {
   line-height: 120%;
 }
 
+.service-item {
+  padding: 90px 0;
+}
+
+.service-item.scrolled {
+  margin-top: 141px;
+}
+
+.service-item__title {
+  color: #0a2783;
+  margin-bottom: 40px;
+}
+
+.service-item__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 90px;
+}
+
+.service-item__column:first-child {
+  -ms-flex-preferred-size: 1070px;
+      flex-basis: 1070px;
+  margin-right: 50px;
+}
+
+.service-item__column:last-child {
+  -ms-flex-preferred-size: 570px;
+      flex-basis: 570px;
+}
+
+.service-item__text {
+  font-family: "Gordita-Regular";
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 140%;
+  margin-bottom: 55px;
+}
+
+.service-item__text-2 {
+  font-family: "Gordita-Medium";
+  font-size: 36px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 120%;
+  margin-bottom: 25px;
+}
+
+.service-item__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.service-item__group:first-child {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.service-item__group:nth-child(2) {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.service-item__group:last-child .service-item__step::after {
+  content: none;
+}
+
+.service-item__step {
+  position: relative;
+  padding-bottom: 45px;
+  font-family: "Gordita-Medium";
+  font-size: 48px;
+  color: #0a2783;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.service-item__step::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #0a2783;
+}
+
+.service-item__step::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 14px;
+  width: 100%;
+  height: 2px;
+  border: 2px dashed rgba(10, 39, 131, 0.3);
+}
+
+.service-item__stage {
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: "Gordita-Medium";
+  font-size: 28px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.service-item__time {
+  font-family: "Gordita-Regular";
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.service-item__name {
+  margin-bottom: 55px;
+  font-family: "Gordita-Medium";
+  font-size: 36px;
+  color: #0a2783;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.service-item__group-2 {
+  padding-bottom: 80px;
+  border-bottom: 2px solid #0a2783;
+}
+
+.service-item__group-3 {
+  padding-top: 30px;
+}
+
+.service-item__text-3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 25px;
+  font-family: "Gordita-Regular";
+  font-size: 28px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+.service-item__text-3 div {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: end;
+  font-family: "Gordita-Medium";
+  font-size: 28px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 120%;
+}
+
+.service-item__text-3 div span {
+  display: block;
+  margin-bottom: 25px;
+}
+
+.service-item__button {
+  display: block;
+  margin-top: 60px;
+  padding: 30px 0;
+  text-align: center;
+  background: #0a2783;
+  font-family: "Gordita-Medium";
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: 500;
+  line-height: 120%;
+}
+
 .news {
   padding: 90px 0;
   background: url("../img/dots-news.svg") no-repeat 100% 2%;
@@ -2336,33 +2519,40 @@ body.lock {
   margin-bottom: 60px;
 }
 
-.analytics__column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px -15px;
+.analytics__entry {
+  display: block;
+  margin-bottom: 85px;
 }
 
-.analytics__entry .entry__item {
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  min-height: 480px;
+.analytics__name {
+  font-family: "Gordita-Medium";
+  font-size: 48px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 140%;
+  margin-bottom: 15px;
 }
 
-.analytics__entry .entry__item:hover {
-  background: #0a2783;
-  border-color: #0a2783;
-  color: #ffffff;
+.analytics__name:hover {
+  color: #0a2783;
 }
 
-.analytics__entry .entry__item:hover .entry__btn span {
-  color: #ffffff;
+.analytics__data {
+  font-family: "Gordita-Regular";
+  font-size: 24px;
+  color: #0a2783;
+  font-weight: 400;
+  line-height: 120%;
+  margin-bottom: 30px;
 }
 
-.analytics__entry .entry__item:hover .entry__btn span::before {
-  background: url("../img/icon/btn-arrow-white.svg");
+.analytics__discription {
+  font-family: "Gordita-Regular";
+  font-size: 18px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 140%;
+  max-width: 1300px;
 }
 
 .projects {
@@ -2383,34 +2573,72 @@ body.lock {
   margin-bottom: 60px;
 }
 
-.projects__column {
+.projects__entry {
+  display: block;
+  margin-bottom: 60px;
+}
+
+.projects__group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  margin: -15px -15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
 }
 
-.projects__entry .entry__item {
-  min-height: 600px;
+.projects__logo {
+  margin-right: 25px;
+  max-height: 90px;
 }
 
-.projects__entry .entry__name {
-  font-family: "Gordita-Bold";
-}
-
-.projects__entry .entry__image {
-  margin-left: 30px;
-  margin-top: 60px;
-  height: auto;
-}
-
-.projects__entry .entry__image img {
+.projects__logo img {
+  width: 100%;
+  height: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  width: auto;
-  max-height: 120px;
+}
+
+.projects__name-firm {
+  max-width: 720px;
+  font-family: "Gordita-Medium";
+  font-size: 24px;
+  color: #656565;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.projects__name {
+  max-width: 1100px;
+  margin-bottom: 20px;
+  font-family: "Gordita-Bold";
+  font-size: 36px;
+  color: #000000;
+  font-weight: 700;
+  line-height: 140%;
+}
+
+.projects__discription {
+  max-width: 1500px;
+  margin-bottom: 20px;
+  font-family: "Gordita-Regular";
+  font-size: 24px;
+  color: #000000;
+  font-weight: 400;
+  line-height: 140%;
+}
+
+.projects__service, .projects__idustry {
+  font-family: "Gordita-Medium";
+  font-size: 24px;
+  color: #656565;
+  font-weight: 500;
+  line-height: 140%;
+}
+
+.projects__service span, .projects__idustry span {
+  color: #000000;
 }
 
 .art-projects__row:first-child {
