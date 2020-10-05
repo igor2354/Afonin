@@ -106,6 +106,14 @@ $(document).ready(function () {
     }
   });
 
+  $(".video__prev").on("click", function () {
+    if ($(this).parent().find("video").get(0).paused) {
+      $(this).parent().find("video").get(0).play();
+      $(this).css({ display: "none" });
+      $(this).parent().addClass("play");
+    }
+  });
+
   //==================SLIDER================================================
   $(".reviews__slider-1").slick({
     arrows: true,
