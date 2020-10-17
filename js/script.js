@@ -1,21 +1,3 @@
-function popupTeam(el) {
-  $(".popup__university").text(el.find($(".item-team__info-edu")).text());
-  $(".popup__spec-dicript").text(el.find($(".item-team__info-spec")).text());
-  $(".popup__contact-email").text(el.find($(".item-team__info-contact")).text());
-  $(".popup__name").text(el.find($(".item-team__name")).text());
-  $(".popup__post").text(el.find($(".item-team__info-post")).text());
-  $(".popup__image")
-    .find("img")
-    .attr("src", el.find($("image")).attr("xlink:href"));
-}
-
-function popupSupport(callback) {
-  $(".popup").addClass("open");
-  $("body").addClass("lock");
-  $(".popup-2").find($(".support__group")).remove();
-  $(".popup-2").find($(".support__list-popup")).remove();
-  callback();
-}
 
 function videoName(selector) {
   $("#tab-2")
@@ -125,6 +107,7 @@ $(document).ready(function () {
     slidesToShow: 5,
     centerMode: true,
     centerPadding: "0",
+    focusOnSelect: true,
     // responsive: [
     //   {
     //     breakpoint: 1700,
@@ -181,48 +164,12 @@ $(document).ready(function () {
   });
 
   //======================scrollbar=================
-  $(".scrollbar-rail").scrollbar();
 
-  //=================POPUP========================
-
-  $.each($(".popup-open"), function (index, val) {
-    $(val).on("click", function () {
-      $(".popup").addClass("open");
-      $("body").addClass("lock");
-
-      if ($(this).parents(".team__wrap")) {
-        popupTeam($(val));
-      }
-
-      if ($(this).parents(".support__wrap")) {
-        popupSupport(function () {
-          $(val).parent().find(".support__group").clone().prependTo(".popup__content");
-          $(val).parent().find(".support__list-popup").clone().appendTo(".popup__content");
-        });
-      }
-    });
+  $(".projects__column").mCustomScrollbar({
+    theme: "my-theme",
+    autoDraggerLength: false,
+    scrollInertia: 300
   });
-
-  $.each($(".popup-close"), function (index, val) {
-    $(val).on("click", function (e) {
-      if (e.target === $(".popup__body")[0] || e.target === $(".popup__close")[0]) {
-        $(".popup").removeClass("open");
-        $("body").removeClass("lock");
-      }
-    });
-  });
-
-  //================HOVER TEAM=========================
-  // $.each($(".item-team__wrap"), function (index, val) {
-  //   $(val).hover(
-  //     function () {
-  //       $(this).find($("circle")).attr({ r: "100%" });
-  //     },
-  //     function () {
-  //       $(this).find($("circle")).attr({ r: "150" });
-  //     }
-  //   );
-  // });
 
   //===============ANIMATION SCROLL======================
   const animItems = $(".anim-items");
@@ -258,29 +205,27 @@ $(document).ready(function () {
 
   function sizeTeam() {
     if (match.matches) {
-      $(".item-team__image").find("circle").attr("r", "113");
-      $(".item-team__image").find("circle").attr("cy", "135");
+      $(".item-team__image").find("rect").attr({ width: "225", height: "225", x: "45", y: "38" });
 
       $.each($(".item-team__wrap"), function (index, val) {
         $(val).hover(
           function () {
-            $(this).find($("circle")).attr({ r: "100%" });
+            $(this).find($("rect")).attr({ width: "100%", height: "100%", x: "0", y: "0" });
           },
           function () {
-            $(this).find($("circle")).attr({ r: "113" });
+            $(this).find($("rect")).attr({ width: "225", height: "225", x: "45", y: "38" });
           }
         );
       });
     } else {
-      $(".item-team__image").find("circle").attr("r", "150");
-      $(".item-team__image").find("circle").attr("cy", "180");
+      $(".item-team__image").find("rect").attr({ width: "300", height: "300", x: "60", y: "50" });
       $.each($(".item-team__wrap"), function (index, val) {
         $(val).hover(
           function () {
-            $(this).find($("circle")).attr({ r: "100%" });
+            $(this).find($("rect")).attr({ width: "100%", height: "100%", x: "0", y: "0" });
           },
           function () {
-            $(this).find($("circle")).attr({ r: "150" });
+            $(this).find($("rect")).attr({ width: "300", height: "300", x: "60", y: "50" });
           }
         );
       });
