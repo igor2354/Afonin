@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/jquery.scrollbar.css" />
+    <link rel="stylesheet" href="./css/jquery.mCustomScrollbar.css">
     <title>Афонин, Божор и партнёры</title>
   </head>
   <body>
@@ -99,23 +99,27 @@
               </div>
               <div class="article__right">
                 <div class="article__group">
-                  <div class="article__date">03 июня 2019</div>
-                  <div class="article__source">Источник: Ведомости</div>
+                  <a href="./page-team.html">
+                    <div class="article__team team-article">
+                      <div class="team-article__img"><img src="./img/team/avatar-1.png" alt="" /></div>
+                      <div class="team-article__group-person">
+                        <div class="team-article__name">Михаил Божор</div>
+                        <div class="team-article__post">Генеральный директор</div>
+                        <div class="team-article__email">mbozhor@abp.legal</div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <div class="article__group">
+                  <div class="article__source">Источник:</div>
+                  <div class="article__source-image"><a href="https://www.vedomosti.ru/"><img src="./img/source/source-icon.png" alt=""></a></div>
+                  <div class="article__date">22 июля 2020</div>
+
                   <div class="article__share">
                     <a href=""><span>Поделиться</span></a>
                   </div>
                 </div>
-                <div class="article__group">
-                  <div class="article__person">Действующие лица:</div>
-                  <a href="./page-team.html">
-                    <div class="article__team team-article">
-                      <div class="team-article__img"><img src="./img/team/afonin.webp" alt="" /></div>
-                      <div class="team-article__name">Александр Афонин</div>
-                      <div class="team-article__post">Руководитель практики IP, партнер</div>
-                      <div class="team-article__email">afonin@abp.legal</div>
-                    </div>
-                  </a>
-                </div>
+
               </div>
             </div>
           </div>
@@ -267,7 +271,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/slick.min.js"></script>
-    <script src="./js/jquery.scrollbar.min.js"></script>
+    <script src="./js/jquery.mCustomScrollbar.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?apikey=7c03af3a-2e55-48da-972d-a1698f57b2f0&lang=ru_RU" type="text/javascript"></script>
     <script src="./js/yamap.js"></script>
     <script src="./js/script.js"></script>
